@@ -31,3 +31,4 @@ LocalPreferences.toml
 !/examples/julia2024.gif
 !/examples/hover.gif
 !/examples/oscillating.gif
+Manifest-v1.12.toml
