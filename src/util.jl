@@ -304,7 +304,7 @@ For example, the standard Smagorinsky–Lilly model for the sub-grid scale stres
 
 It can be implemented as
     `smagorinsky(I::CartesianIndex{m} where m; S, Cs, Δ) = @views (Cs*Δ)^2*sqrt(dot(S[I,:,:],S[I,:,:]))`
-and passed into `sim_step!` as a keyword argument together with the varibles than the function needs (`S`, `Cs`, and `Δ`):
+and passed into `sim_step!` as a keyword argument together with the variables than the function needs (`S`, `Cs`, and `Δ`):
     `sim_step!(sim, ...; udf=sgs, νₜ=smagorinsky, S, Cs, Δ)`
 """
 function sgs!(flow, t; νₜ, S, Cs, Δ)
